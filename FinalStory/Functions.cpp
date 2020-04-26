@@ -40,11 +40,13 @@ void GetUserInput(string userName)
 		cout << "\nDo you want to get your gear or find the intruder?";
 		//Getting the user's choice
 		getline(cin, userChoice);
+		//Choices in order to activate gear scenario
 		if (userChoice == "get gear" || userChoice == "get my gear")
 		{
 			GearScenario(&userName);
 			winCondition = true;
 		}
+		//Choices in order to activate intruderScenario
 		else if (userChoice == "find intruder" || userChoice == "find the intruder")
 		{
 			IntruderScenario(userName);
@@ -87,6 +89,7 @@ void GearScenario(string* userName)
 	cout << "\nThe Security guard approaches you. 'Thanks to  you, that experimental gas wasn't taken from us. Great job!'\n";
 	cout << "\nBefore you leave, a man approaches you. 'Are you the one that saved our Nerve Gas?' he asks. 'Oh! you're a new recruit! How rude of me! I'm the supervisor of this Laboratory, but I realized that you haven't been given your codename yet.'\n";
 	cout << "\nHe Pauses for a bit. Seeing as you saved one of our vital projects, and the last person to do that was around 7 years ago, we'll call you Agent 7 for now. Great work, Agent!'\n";
+	//New name for the character which is only  applied if the player chooses this scenario
 	string newName = "Agent 7";
 	*userName = newName;
 }

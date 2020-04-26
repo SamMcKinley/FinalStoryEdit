@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 
+//Character class along with ammo for taser
 class Character
 {
 public:
